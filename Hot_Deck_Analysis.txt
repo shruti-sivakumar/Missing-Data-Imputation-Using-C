@@ -1,0 +1,64 @@
+HOT DECK
+
+PI DIABETES
+
+AFTER IMPUTATION
+
+Pregnancies	0.000000
+Glucose	0.000000
+Blood Pressure	0.000000
+Skin Thickness	5.859375
+Insulin	15.885416
+BMI		0.000000
+Pedigree	0.000000
+Age	0.000000
+Class Variable    0.000000
+
+total: 2.40
+
+WORLD-HAPPINESS-REPORT
+
+AFTER IMPUTATION
+
+Country name        0.000000
+year                0.000000
+LifeLadder          0.000000
+GDP                 0.000000
+Price               0.000000
+socialsupport       0.000000
+healthylifestyle    0.000000
+Freedom             0.000000
+Generosity          0.000000
+corruption          0.000000
+Positiveaffect      0.000000
+Negativeaffect      0.000000
+
+total: 0.00
+
+MELB_DATA
+
+AFTER IMPUTATION
+
+suburb             0.000000
+address            0.000000
+rooms              0.000000
+type               0.000000
+price              0.000000
+method             0.000000
+seller             0.000000
+date               0.000000
+distance           0.000000
+postcode           0.000000
+bedroom            0.000000
+bathroom           0.000000
+car                0.000000
+landsize           0.000000
+building_area      0.000000
+year_built         0.000000
+council_area      10.081001
+lattitude          0.000000
+longitude          0.000000
+region_name        0.000000
+property_count     0.000000
+
+total : 0.48 
