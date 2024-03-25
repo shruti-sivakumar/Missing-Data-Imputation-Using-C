@@ -1,0 +1,63 @@
+LISTWISE DELETION
+
+PI DIABETES
+
+AFTER IMPUTATION
+
+Pregnancies	0.000000
+Glucose	0.000000
+Blood Pressure	0.000000
+Skin Thickness	0.000000
+Insulin	0.000000
+BMI		0.000000
+Pedigree	0.000000
+Age	0.000000
+Class Variable    0.000000
+
+total: 0.00
+
+WORLD-HAPPINESS-REPORT
+
+AFTER IMPUTATION
+
+Country name                        0.0
+year                                0.0
+Life Ladder                         0.0
+Log GDP per capita                  0.0
+Social support                      0.0
+Healthy life expectancy at birth    0.0
+Freedom to make life choices        0.0
+Generosity                          0.0
+Perceptions of corruption           0.0
+Positive affect                     0.0
+Negative affect                     0.0
+
+total: 0.00
+
+MELB_DATA
+
+AFTER IMPUTATION
+
+suburb             0.000000
+address            0.000000
+rooms              0.000000
+type               0.000000
+price              0.000000
+method             0.000000
+seller             0.000000
+date               0.000000
+distance           0.000000
+postcode           0.000000
+bedroom            0.000000
+bathroom           0.000000
+car                0.000000
+landsize           0.000000
+building_area      0.000000
+year_built         0.000000
+council_area      0.000000
+lattitude          0.000000
+longitude          0.000000
+region_name        0.000000
+property_count     0.000000
+
+total : 0.00
