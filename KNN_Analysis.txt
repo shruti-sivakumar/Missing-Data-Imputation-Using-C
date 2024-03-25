@@ -1,0 +1,63 @@
+KNN
+
+PI_DIABETES
+
+AFTER IMPUTATION
+
+pregnancies       0.000000
+glucose            0.000000
+blood_pressure     0.000000
+skin_thickness     2.864583
+insulin            3.906250
+bmi                0.000000
+pedigree           0.000000
+age                0.000000
+class_variable    0.000000
+
+total : 0.75
+
+WORLD-HAPPINESS-REPORT
+
+AFTER IMPUTATION
+
+country_name       0.000000
+year               0.000000
+life_ladder        0.000000
+log_gdp            0.000000
+social_support     0.000000
+life_expectancy    0.000000
+life_choices       0.000000
+generosity         0.000000
+corruption         0.000000
+positive_affect    0.000000
+negative_affect    0.000000
+
+total : 0.00
+
+MELB_DATA
+
+AFTER IMPUTATION
+
+suburb             0.000000
+address            0.000000
+rooms              0.000000
+type               0.000000
+price              0.000000
+method             0.000000
+seller             0.000000
+date               0.000000
+distance           0.000000
+postcode           0.000000
+bedroom            0.000000
+bathroom           0.000000
+car                0.000000
+landsize           0.000000
+building_area      0.000000
+year_built         0.000000
+council_area      10.081001
+lattitude          0.000000
+longitude          0.000000
+region_name        0.000000
+property_count     0.000000
+
+total : 0.48
