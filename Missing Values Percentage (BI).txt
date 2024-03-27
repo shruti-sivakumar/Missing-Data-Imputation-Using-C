@@ -1,0 +1,55 @@
+PI_DIABETES - BEFORE IMPUTATION
+
+Number of times pregnant                                                    0.000000
+Plasma glucose concentration a 2 hours in an oral glucose tolerance test     0.651042
+Diastolic blood pressure (mm Hg)                                             4.557292
+Triceps skin fold thickness (mm)                                            29.557292
+2-Hour serum insulin (mu U/ml)                                              48.697917
+Body mass index (weight in kg/(height in m)^2)                               1.432292
+Diabetes pedigree function                                                   0.000000
+Age (years)                                                                  0.000000
+Class variable (0 or 1)                                                    0.000000
+
+total : 9.43
+
+WORLD-HAPPINESS-REPORT - BEFORE IMPUTATION
+
+Country name                        0.000000
+year                                0.000000
+Life Ladder                         0.000000
+Log GDP per capita                  1.847101
+Social support                      0.667009
+Healthy life expectancy at birth    2.821960
+Freedom to make life choices        1.641868
+Generosity                          4.566444
+Perceptions of corruption           5.643920
+Positive affect                     1.128784
+Negative affect                     0.820934
+
+total : 1.74
+
+MELB_DATA - BEFORE IMPUTATION
+
+Suburb            0.000000
+Address           0.000000
+Rooms             0.000000
+Type              0.000000
+Price             0.000000
+Method            0.000000
+Seller           0.000000
+Date              0.000000
+Distance          0.000000
+Postcode          0.000000
+Bedroom          0.000000
+Bathroom          0.000000
+Car               0.456554
+Landsize          0.000000
+BuildingArea     47.496318
+YearBuilt        39.580265
+CouncilArea      10.081001
+Lattitude         0.000000
+Longtitude        0.000000
+Regionname        0.000000
+Propertycount     0.000000
+
+total : 4.65
