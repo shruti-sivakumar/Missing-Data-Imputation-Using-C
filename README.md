@@ -2,7 +2,7 @@
 
 This repository contains the first semester project for the course "22AIE101: Problem Solving & C Programming." The project focuses on addressing the critical issue of missing data imputation using C programming across three diverse datasets. Five imputation methods—Linear Regression, K-nearest Neighbours, Mean and Median Imputation, List-wise Deletion, and Hot Deck Imputation—are employed to comprehensively evaluate their strengths and limitations. Each team member focused on the implementation of one of the methods, with the logic code tailored for each dataset. Through systematic assessment, the aim is to identify the best-performing imputation method for each dataset.
 
-### Methods Used
+## Methods Used
 
 ### 1. Linear Regression Imputation
   - Utilizes linear regression to estimate missing values.
