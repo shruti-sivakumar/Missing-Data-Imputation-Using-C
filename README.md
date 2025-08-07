@@ -76,7 +76,7 @@ Each imputation strategy was implemented from scratch in C, including logic tail
 
 This project was collaboratively developed as a foundational exploration into data preprocessing and algorithmic reasoning using C:
 
-- **Shruti Sivakumar**
+- [**Shruti Sivakumar**](https://github.com/shruti-sivakumar)
 - Harshitha Chandrasekar
 - [Shreya Sriram](https://github.com/Shreya12125)
 - [Vida Nadheera](https://github.com/Vida181105)
