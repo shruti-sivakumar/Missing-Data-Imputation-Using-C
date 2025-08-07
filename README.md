@@ -78,8 +78,8 @@ This project was collaboratively developed as a foundational exploration into da
 
 - **Shruti Sivakumar**
 - Harshitha Chandrasekar
-- Shreya Sriram
-- Vida Nadheera
+- [Shreya Sriram](https://github.com/Shreya12125)
+- [Vida Nadheera](https://github.com/Vida181105)
 - Manvitha Payyavula
 
 ---
