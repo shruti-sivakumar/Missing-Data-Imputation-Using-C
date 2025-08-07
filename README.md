@@ -1,109 +1,89 @@
 # Missing Data Imputation Using C
 
-This repository contains the first semester project for the course "22AIE101: Problem Solving & C Programming." The project focuses on addressing the critical issue of missing data imputation using C programming across three diverse datasets. Five imputation methods—Linear Regression, K-nearest Neighbours, Mean and Median Imputation, List-wise Deletion, and Hot Deck Imputation—are employed to comprehensively evaluate their strengths and limitations. Each team member focused on the implementation of one of the methods, with the logic code tailored for each dataset. Through systematic assessment, the aim is to identify the best-performing imputation method for each dataset.
+This project represents my **first university project**, developed collaboratively to explore classic missing data imputation techniques using C. The goal was to implement and evaluate five methods on three real-world datasets, with each method coded from scratch and adapted to the specific structure and missingness patterns of each dataset.
 
-## Methods Used
+Missing data imputation is a critical preprocessing step in any data pipeline. This project systematically compares several popular techniques to highlight their strengths, limitations, and contextual suitability.
 
-### 1. Linear Regression Imputation
-  - Utilizes linear regression to estimate missing values.
-  - Treats the variable with missing data as the dependent variable.
-  - Constructs a regression model using other relevant variables as predictors.
-  - Provides a statistically grounded approach with the incorporation of multiple predictors.
+---
 
-### 2. KNN Imputation
-  - Non-parametric technique using values from nearest neighbours.
-  - Calculates separation between observation with missing values and its neighbours.
-  - Averages or weights values of nearby neighbours for imputation.
-  - Requires careful selection of parameters like number of neighbours (k) and distance metric.
+## Techniques Implemented
 
-### 3. Mean and Median Imputation
-  - Replaces missing values with mean or median of observed values for the variable.
-  - Simple and easy to implement.
-  - Assumes missing values occur entirely at random.
-  - May introduce bias and doesn't account for changes in data distribution.
+Each imputation strategy was implemented from scratch in C, including logic tailored to each dataset:
 
-### 4. Listwise Deletion
-  - Involves removing cases with any missing values from analysis.
-  - Not an imputation method but leads to data loss.
-  - Ease of analysis comes at potential cost of excluding valuable information.
-  - Can introduce bias if missing data is linked to outcome variable or critical factors.
+| Method | Description |
+|--------|-------------|
+| **Linear Regression Imputation** | Builds a regression model to predict and impute missing values using correlated variables. |
+| **k-Nearest Neighbors (k-NN)** | Uses similarity-based voting among nearest neighbors to estimate missing entries. |
+| **Mean/Median Imputation** | Fills missing values using column-level statistical estimates (mean or median). |
+| **Listwise Deletion** | Removes entire rows with missing entries — easy but causes potential information loss. |
+| **Hot Deck Imputation** | Imputes missing values using similar “donor” observations from the same dataset. |
 
-### 5. Hot Deck Imputation
-  - Imputes missing entries by comparing features of observations.
-  - Relies on predetermined criteria to identify suitable donor observations.
-  - Fills missing values using values from identified donors.
-  - Leverages characteristics of comparable observations to preserve coherence and context of the dataset.
+---
 
 ## Datasets Used
 
-### 1. Pima Indians
-- **Description**: This dataset includes 768 occurrences and 9 attributes, relating to the medical data of a group of people called Pima Indians. The 'class variable' attribute indicates whether the patient demonstrates traits of interest for each instance, and it is binary.
-- **Missing Data Patterns**: The dataset was purposefully created to teach imputation techniques, with a larger percentage of missing data. 
-- **Features**: Numerical values representing various facets of the patients’ medical problems are included, such as the number of pregnancies, plasma glucose concentration, diastolic blood pressure, and more.
-  
-### 2. World Happiness Report
-- **Description**: This dataset offers an extensive examination of happiness worldwide, with 1,949 occurrences and 11 characteristics.
-- **Missing Data Patterns**: Most missing values are concentrated in the attribute "Perceptions of Corruption."
-- **Features**: The dataset examines factors affecting happiness, including economic productivity, social support, life expectancy, and more.
+| Dataset | Description | Size | Key Features with Missing Data |
+|--------|-------------|------|--------------------------------|
+| **Pima Indian Diabetes** | Medical dataset of diagnostic measures and outcomes | 768 rows × 9 columns | Plasma Glucose, BMI, Blood Pressure |
+| **World Happiness Report** | Global socio-economic indicators of happiness | 1,949 rows × 11 columns | Perceptions of Corruption |
+| **Melbourne Housing** | Real estate listings from 2016–17 | 13,580 rows × 21 columns | Land Size, Building Area |
 
-### 3. Melbourne Housing Data
-- **Description**: This dataset contains 13,580 cases with 21 variables, providing insights into Melbourne housing patterns in 2016 and 2017.
-- **Missing Data Patterns**: Notably, 'Land Size' binaries missing values, and a substantial fraction of data have missing values for the 'Building Area' characteristic.
-- **Features**: Various features like 'Rooms,' 'Price,' 'Distance,' 'Bedroom2,' 'Bathroom,' and more, offer a comprehensive understanding of Melbourne's housing scene.
+---
 
-## Purpose
-The purpose of this project is to explore and compare different missing data imputation techniques using C programming, with the ultimate goal of finding the most effective method for each dataset.
+## Sample Evaluation Summary
 
-## Implementation
-The project consists of C programs implementing each imputation technique across the three datasets. Each program includes comments for clarity and understanding.
+| Method | Pima Indians | World Happiness | Melbourne Housing |
+|--------|--------------|------------------|-------------------|
+| Linear Regression | ✅ Excellent | ✅ Excellent | ✅ Excellent |
+| KNN | ✅ Good | ✅ Excellent | ⚠️ Poor |
+| Mean/Median | ✅ Accurate but repetitive | ✅ Consistent | ⚠️ Limited uniqueness |
+| Listwise Deletion | ⚠️ Significant data loss | ✅ Effective | ✅ High performance |
+| Hot Deck | ⚠️ 2.4% missing left | ✅ Excellent | ✅ Good |
 
-## Method-Specific Evaluation
+> See `/analysis` for full breakdowns.
 
-### Linear Regression
-- Perfect results across all datasets, reducing the percentage of missing data to zero while maintaining data quality.
+---
 
-### KNN
-- Effective for the World Happiness Index dataset, reducing missing data to 0. Quantity of imputation is lower compared to Linear Regression.
-- Good imputation quality for the Pima Indians dataset but not sufficient quantity.
-- Poor imputation quality for the Melbourne Housing Data.
+## Repository Structure
 
-### Mean & Median Imputation
-- Works perfectly for the Pima Indian and World Happiness Index datasets, reducing missing values to 0.0.
-- Performance in other datasets is comparable to other methods, but lacks uniqueness in imputed values.
+```
+├── data/
+│   ├── raw/            # Original datasets
+│   └── imputed/        # Post-imputation outputs by method
+├── src/
+│   ├── linear_regression/
+│   ├── knn/
+│   ├── mean_median/
+│   ├── listwise_deletion/
+│   └── hot_deck/
+├── analysis/           # Result interpretations per method
+├── LICENSE
+└── README.md
+```
 
-### Listwise Deletion
-- Reduces all missing data percentages to 0, including string values.
-- Less preferred due to loss of data, best suited for datasets with very few instances of missing data.
+---
 
-### Hot Deck
-- Yielded perfect results only for the World Happiness Index dataset.
-- Poor imputation quality for Pima Indians, with 2.4% of data still missing.
-- Good results for the Melbourne Housing Data.
+## Key Learnings
 
-## Dataset Analysis
+- Linear Regression and KNN provide robust, context-aware imputation when feature correlation is strong.
+- Mean/Median is effective in reducing missingness but may oversimplify distributions.
+- Listwise Deletion, while easy to implement, often discards valuable data and should be used cautiously.
+- Hot Deck's performance varies widely depending on dataset density and feature spread.
 
-### Dataset 1 - Pima Indians
-- Linear Regression and KNN are most effective.
-- Mean and Median methods reduce missing data to 0.0 but lack imputation quality.
-- Listwise deletion results in the loss of valuable data.
-
-### Dataset 2 - World Happiness Report
-- All methods consistently yield optimal results by reducing missing data to zero.
-- Dataset robustness accommodates different methodologies effectively.
-
-### Dataset 3 - Melbourne Housing Data
-- Listwise deletion delivers flawless results.
-- Mean and Median imputation lacks uniqueness in imputed values.
-
-## Conclusion
-The investigation into various missing data imputation methods across diverse datasets has provided valuable insights into their strengths and limitations. Linear Regression and KNN stand out as robust methods, offering considerable imputation success. However, the choice of method should align with dataset characteristics and desired imputation quality. This study contributes to the discourse on missing data imputation, emphasizing the need for a nuanced approach tailored to dataset intricacies.
+---
 
 ## Contributors
-- Shruti Sivakumar
+
+This project was collaboratively developed as a foundational exploration into data preprocessing and algorithmic reasoning using C:
+
+- **Shruti Sivakumar**
 - Harshitha Chandrasekar
 - Shreya Sriram
 - Vida Nadheera
 - Manvitha Payyavula
 
+---
+
 ## License
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+This project is licensed under the MIT License. See the [LICENSE](./LICENSE) file for more information.
