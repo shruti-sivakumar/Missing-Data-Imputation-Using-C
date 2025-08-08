@@ -1,6 +1,6 @@
 # Missing Data Imputation Using C
 
-This project represents my **first university project**, developed collaboratively to explore classic missing data imputation techniques using C. The goal was to implement and evaluate five methods on three real-world datasets, with each method coded from scratch and adapted to the specific structure and missingness patterns of each dataset.
+This project represents my **first university project**, developed to explore classic missing data imputation techniques using C. The goal was to implement and evaluate five methods on three real-world datasets, with each method coded from scratch and adapted to the specific structure and missingness patterns of each dataset.
 
 Missing data imputation is a critical preprocessing step in any data pipeline. This project systematically compares several popular techniques to highlight their strengths, limitations, and contextual suitability.
 
@@ -69,18 +69,6 @@ Each imputation strategy was implemented from scratch in C, including logic tail
 - Mean/Median is effective in reducing missingness but may oversimplify distributions.
 - Listwise Deletion, while easy to implement, often discards valuable data and should be used cautiously.
 - Hot Deck's performance varies widely depending on dataset density and feature spread.
-
----
-
-## Contributors
-
-This project was collaboratively developed as a foundational exploration into data preprocessing and algorithmic reasoning using C:
-
-- [**Shruti Sivakumar**](https://github.com/shruti-sivakumar) - KNN Imputation
-- Harshitha Chandrasekar
-- [Shreya Sriram](https://github.com/Shreya12125)
-- [Vida Nadheera](https://github.com/Vida181105)
-- Manvitha Payyavula
 
 ---
 
